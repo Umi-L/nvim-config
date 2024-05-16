@@ -18,3 +18,9 @@ vim.api.nvim_set_keymap('i', '<S-Up>', '<Esc>v<Up>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<S-Down>', '<Esc>v<Down>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<S-Left>', '<Esc>v<Left>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<S-Right>', '<Esc>v<Right>', { noremap = true })
+
+-- Copilot setup
+require('copilot').setup {}
+
+-- Link SignColumn to Normal
+vim.cmd [[hi! link SignColumn Normal]]
