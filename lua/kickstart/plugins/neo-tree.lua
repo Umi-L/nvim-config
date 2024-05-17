@@ -10,9 +10,9 @@ return {
     'MunifTanjim/nui.nvim',
   },
   cmd = 'Neotree',
-  keys = {
-    { '\\', ':Neotree reveal<CR>', { desc = 'NeoTree reveal' } },
-  },
+  init = function()
+    vim.api.nvim_set_keymap('n', '\\', ':Neotree reveal<CR>', { noremap = true, silent = true, desc = 'NeoTree reveal' })
+  end,
   opts = {
     filesystem = {
       window = {
