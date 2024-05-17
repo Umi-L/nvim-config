@@ -24,3 +24,37 @@ require('copilot').setup {}
 
 -- Link SignColumn to Normal
 vim.cmd [[hi! link SignColumn Normal]]
+
+-- -- set highlivts for noice
+--     NoiceCmdlinePopupBorderHelp
+--     NoiceCmdlinePopupBorderCmdline
+--     NoiceCmdlinePopupBorderFilter
+--     NoiceCmdlinePopupBorderInput
+--     NoiceCmdlinePopupBorderLua
+--     NoiceCmdlinePopupBorderSearch
+--
+-- NoiceCmdlineIconCmdline
+-- NoiceCmdlineIconFilter
+-- NoiceCmdlineIconInput
+-- NoiceCmdlineIconHelp
+-- NoiceCmdlineIconLua
+-- NoiceCmdlineIconSearch
+
+-- set highlivts for noice
+vim.cmd [[
+    hi! link NoiceCmdlinePopupBorderHelp Normal 
+    hi! link NoiceCmdlinePopupBorderCmdline Normal
+    hi! link NoiceCmdlinePopupBorderFilter Normal
+    hi! link NoiceCmdlinePopupBorderInput Normal
+    hi! link NoiceCmdlinePopupBorderLua Normal
+    hi! link NoiceCmdlinePopupBorderSearch Normal
+
+    hi! link NoiceCmdlineIconCmdline Normal
+    hi! link NoiceCmdlineIconFilter Normal
+    hi! link NoiceCmdlineIconInput Normal
+    hi! link NoiceCmdlineIconHelp Normal
+    hi! link NoiceCmdlineIconLua Normal
+    hi! link NoiceCmdlineIconSearch Normal
+
+    hi! link NoiceCmdLinePopupTitle Normal
+]]
