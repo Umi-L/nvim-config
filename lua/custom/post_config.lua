@@ -19,6 +19,14 @@ vim.api.nvim_set_keymap('i', '<S-Down>', '<Esc>v<Down>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<S-Left>', '<Esc>v<Left>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<S-Right>', '<Esc>v<Right>', { noremap = true })
 
+-- remap ctrl up to page up
+vim.api.nvim_set_keymap('n', '<C-Up>', '<PageUp>', { noremap = true })
+vim.api.nvim_set_keymap('v', '<C-Up>', '<PageUp>', { noremap = true })
+
+-- remap ctrl down to page down
+vim.api.nvim_set_keymap('n', '<C-Down>', '<PageDown>', { noremap = true })
+vim.api.nvim_set_keymap('v', '<C-Down>', '<PageDown>', { noremap = true })
+
 -- Copilot setup
 require('copilot').setup {}
 
