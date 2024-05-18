@@ -84,6 +84,10 @@ I hope you enjoy your Neovim journey,
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
+-- disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -563,7 +567,7 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        -- pyright = {},
+        pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -572,7 +576,24 @@ require('lazy').setup({
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
-        --
+
+        -- svelte
+        svelte = {
+          filetypes = { 'svelte' },
+        },
+
+        -- typescript
+        tsserver = {
+          filetypes = { 'typescript', 'typescriptreact' },
+        },
+
+        omnisharp = {
+          filetypes = { 'csharp' },
+        },
+
+        prettier = {
+          filetypes = { 'javascript', 'typescript', 'typescriptreact', 'javascriptreact', 'css', 'scss', 'json', 'graphql', 'markdown', 'vue' },
+        },
 
         lua_ls = {
           -- cmd = {...},
@@ -628,7 +649,7 @@ require('lazy').setup({
       {
         '<leader>f',
         function()
-          require('conform').format { async = true, lsp_fallback = true }
+          require('conform').format { async = true, lsp_fallback = true, formatters = { 'prettier' } }
         end,
         mode = '',
         desc = '[F]ormat buffer',
