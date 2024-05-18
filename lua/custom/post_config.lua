@@ -27,6 +27,18 @@ vim.api.nvim_set_keymap('v', '<C-Up>', '<PageUp>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-Down>', '<PageDown>', { noremap = true })
 vim.api.nvim_set_keymap('v', '<C-Down>', '<PageDown>', { noremap = true })
 
+-- " Use ctrl-[hjkl] to select the active split!
+-- nmap <silent> <c-k> :wincmd k<CR>
+-- nmap <silent> <c-j> :wincmd j<CR>
+-- nmap <silent> <c-h> :wincmd h<CR>
+-- nmap <silent> <c-l> :wincmd l<CR>
+
+-- use alt up down left right to move between splits
+vim.api.nvim_set_keymap('n', '<M-Up>', ':wincmd k<CR>', { silent = true, noremap = true })
+vim.api.nvim_set_keymap('n', '<M-Down>', ':wincmd j<CR>', { silent = true, noremap = true })
+vim.api.nvim_set_keymap('n', '<M-Left>', ':wincmd h<CR>', { silent = true, noremap = true })
+vim.api.nvim_set_keymap('n', '<M-Right>', ':wincmd l<CR>', { silent = true, noremap = true })
+
 -- Copilot setup
 require('copilot').setup {}
 
