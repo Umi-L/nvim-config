@@ -589,6 +589,14 @@ require('lazy').setup({
 
         omnisharp = {
           filetypes = { 'csharp', 'cs' },
+          settings = {
+            omnisharp = {
+              intellisense = {
+                filterOutOfScope = true,
+                filterOutOfScopeDelay = 1000,
+              },
+            },
+          },
         },
 
         prettier = {
