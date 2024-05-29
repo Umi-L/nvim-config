@@ -9,5 +9,13 @@ return {
         reveal = { 'close' },
       },
     },
+    highlights = {
+      fill = {
+        bg = {
+          attribute = 'bg',
+          highlight = 'Normal',
+        },
+      },
+    },
   },
 }
