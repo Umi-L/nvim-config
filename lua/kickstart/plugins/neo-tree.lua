@@ -11,7 +11,7 @@ return {
   },
   cmd = 'Neotree',
   init = function()
-    vim.api.nvim_set_keymap('n', '\\', ':Neotree reveal<CR>', { noremap = true, silent = true, desc = 'NeoTree reveal' })
+    vim.api.nvim_set_keymap('n', '\\', ':Neotree reveal right<CR>', { noremap = true, silent = true, desc = 'NeoTree reveal right' })
   end,
   opts = {
     filesystem = {

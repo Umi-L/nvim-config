@@ -823,13 +823,12 @@ require('lazy').setup({
       vim.cmd.colorscheme 'gruvbox'
     end,
   },
-  -- {
+  -- -- {
   --   'rose-pine/neovim',
   --   name = 'rose-pine',
   --   init = function()
   --     vim.cmd 'colorscheme rose-pine'
   --   end,
-  -- },
   -- {
   --   'savq/melange-nvim',
   --
@@ -837,7 +836,16 @@ require('lazy').setup({
   --     vim.cmd 'colorscheme melange'
   --   end,
   -- },
-
+  -- {
+  --   'briones-gabriel/darcula-solid.nvim',
+  --
+  --   config = function()
+  --     vim.cmd 'colorscheme darcula-solid'
+  --   end,
+  -- },
+  -- {
+  --   'rktjmp/lush.nvim',
+  -- },
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 

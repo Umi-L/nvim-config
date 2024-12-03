@@ -33,6 +33,16 @@ vim.api.nvim_set_keymap('v', '<C-Down>', '<PageDown>', { noremap = true })
 -- nmap <silent> <c-h> :wincmd h<CR>
 -- nmap <silent> <c-l> :wincmd l<CR>
 
+-- navigate by display lines instead of actual lines
+vim.api.nvim_set_keymap('n', '<Down>', 'gj', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Up>', 'gk', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<Left>', 'g0', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<Right>', 'g$', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<Down>', 'gj', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<Up>', 'gk', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('v', '<Left>', 'g0', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('v', '<Right>', 'g$', { noremap = true, silent = true })
+
 -- use alt up down left right to move between splits
 vim.api.nvim_set_keymap('n', '<M-Up>', ':wincmd k<CR>', { silent = true, noremap = true })
 vim.api.nvim_set_keymap('n', '<M-Down>', ':wincmd j<CR>', { silent = true, noremap = true })
