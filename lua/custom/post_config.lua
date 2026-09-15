@@ -50,7 +50,7 @@ vim.api.nvim_set_keymap('n', '<M-Left>', ':wincmd h<CR>', { silent = true, norem
 vim.api.nvim_set_keymap('n', '<M-Right>', ':wincmd l<CR>', { silent = true, noremap = true })
 
 -- Copilot setup
-require('copilot').setup {}
+-- require('copilot').setup {}
 
 -- Link SignColumn to Normal
 vim.cmd [[hi! link SignColumn Normal]]
